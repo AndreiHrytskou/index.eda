@@ -90,7 +90,23 @@ body{
 }
 .slide-content{
 	position: relative;
-	max-width: 400px;
+	max-width: 500px;
+}
+.swiper{
+	position: relative;
+}
+.slider-buttons{
+	position: absolute;
+	right: 46px;
+	bottom: 40px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	width: 100px;
+	justify-content: space-between;
+}
+.slider-button{
+	cursor: pointer;
 }
 .slide-title{
 	margin-top: 0;
@@ -123,11 +139,6 @@ body{
 	font-size: 14px;
 	line-height: 23px;
 }
-.slide-summer{
-	background-image: url('../img/summer.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 .slide:before{
 	content: '';
 	position: absolute;
@@ -138,6 +149,25 @@ body{
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%);
+}
+.slide-summer{
+	background-image: url('../img/summer.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slide-autumn{
+	background-image: url('../img/autumn-week.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slide-vitamin{
+	background-image: url('../img/vitamin-week.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+.slide-vitamin.slide-title{
+	
 }
 .promo{
 	padding: 50px 0;
@@ -236,16 +266,15 @@ body{
 	object-fit: cover;
 }
 .delivery-tag{
-position: absolute;
-top: 16px;
-left: 10px;
-border-radius: 30px;
-color: #49494F;
-font-weight: 500;
-font-size: 20px;
-line-height: 23px;
-padding: 5px 10px;
-
+	position: absolute;
+	top: 16px;
+	left: 10px;
+	border-radius: 30px;
+	color: #49494F;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+	padding: 5px 10px;
 }
 .tag-health{
 	background: #D0FD89;
@@ -322,14 +351,14 @@ padding: 5px 10px;
 	margin-top: 0;
 	margin-bottom: 13px;
 	font-weight: 500;
-font-size: 20px;
-line-height: 23px;
+	font-size: 20px;
+	line-height: 23px;
 }
 .tabs-description{
 	font-weight: 500;
-font-size: 14px;
-line-height: 23px;
-color: #B9B9BE;
+	font-size: 14px;
+	line-height: 23px;
+	color: #B9B9BE;
 }
 .tabs-info{
 	display: flex;
@@ -338,17 +367,17 @@ color: #B9B9BE;
 	}
 .tabs-price{
 	font-weight: 500;
-font-size: 23px;
-line-height: 23px;
-color: #4B4B51;
-display: block;
-margin-bottom: 5px;
+	font-size: 23px;
+	line-height: 23px;
+	color: #4B4B51;
+	display: block;
+	margin-bottom: 5px;
 }
 .tabs-weight{
 	font-weight: 500;
-font-size: 17px;
-line-height: 20px;
-color: #AAAAB1;
+	font-size: 17px;
+	line-height: 20px;
+	color: #AAAAB1;
 }
 .button-outline{
 	background-color: transparent;
@@ -395,4 +424,57 @@ color: #AAAAB1;
 .social-link{
 	margin-left: 20px;
 	text-decoration: none;
+}
+@media(max-width: 1260px){
+	.container{
+		max-width: 960px;
+	}
+	.search-form{
+		margin: 0 40px;
+	}
+	.tabs-content{
+		flex-wrap: wrap;
+	}
+	.tabs-card{
+		flex: 50%;
+		max-width: calc(50% - 30px);
+
+	}
+}
+@media(max-width: 992px){
+	.container{
+		max-width: 760px;
+	}
+	.Slide{
+		padding: 70px;
+	}
+	.delivery-card{
+		width: calc(50% - 30px);
+	}
+	.footer-logo{
+		margin-right: 40px;
+	}
+}
+@media(max-width: 768px){
+	.container{
+		max-width: 560px;
+	}
+	.header{
+		flex-wrap: wrap;
+	}
+	.search-form{
+		order: 5;
+		margin: 15px 0;
+	}
+	.promo{
+		flex-wrap: wrap;
+	}
+}
+@media(max-width: 576px){
+	.container{
+		max-width: 90%;
+	}
+	.tabs-card{
+		max-width: 100%;
+	}
 }
